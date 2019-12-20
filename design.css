@@ -4,33 +4,30 @@ body{
 ul{
     padding-inline-start: 1px;
     position: absolute;
-    float : left;
-    
+    float : left;  
 }
 li{
     list-style-type: none;
     float: left;
-    padding-right: 10px;
+    padding-right: 5px;
+    padding-left:4px;
     width:200;
-   
+    border-left: 1px solid gray; 
+    height: 325px; 
+  
 }
+li:first-child{
+    padding-left: 0px;
+}
+
 p{
     font-weight: bold;
     font-size: 18px;
     font-family: 'Times New Roman';
-    
     padding-top: 1px;
     display:block;
    
 }
-
-.vertical { 
-    border-left: 1px solid gray; 
-    height: 325px; 
-    padding-right: 10px;
-    width:auto;
-       
-} 
 figure-caption{
     font-family:Arial, Helvetica, sans-serif;
     font-size: 12px;
