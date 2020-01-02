@@ -62,7 +62,7 @@ body{
 }
 .cmp_name{
     font-family: sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 20px;
     color: orangered;
     padding-right: 20px;
@@ -156,13 +156,22 @@ left: 50%;
 transform: translate(-50%, -30%);
 
 }
-fieldset{
-    
-    border:2px solid white;
+
+.fset_1{
+    border-bottom: none;;
+    text-align:center; padding: 30px; 
+    margin-bottom: -24px;;
+
 }
-fieldset > p{
+.fset_1 > p{
     text-align: center;
     font-size: 20px;
+}
+.fset_2{
+    border-bottom: none;
+    border-right: none;
+    border-left: none;
+    text-align:center; padding: 30px; 
 }
 .save{
     text-align: center;
@@ -183,7 +192,7 @@ fieldset > p{
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    margin: 4px 2px;
+    margin: 4px 25px;
     cursor: pointer;
     border: 2px solid white;
     
@@ -422,7 +431,7 @@ label[for="remember"]{
     justify-content: center;
    
     height: 228px;
-    padding-top: 10px;
+    padding-top: 30px;
     padding-left: 80px;
    
     
@@ -527,8 +536,9 @@ label[for="remember"]{
     flex-wrap: wrap;
     justify-content: center;
     background-color: whitesmoke;
-    height: 250px;
+    height: 210px;
     padding-left:80px;
+    padding-top:30px ;
 }
 .flex-volunteer-container{
  display: flex;
@@ -684,4 +694,38 @@ footer{
 .un_line{
     border-bottom: 2px solid orangered;
     padding-bottom:5px;
+}
+
+.shapes_3{
+    width: 35px;
+    height: 37px;
+    padding-left:214px;
+}
+.shapes_2{
+    width: 35px;
+    height: 37px;
+    padding-left:165px;
+}
+.shapes_1{
+    width: 35px;
+    height: 37px;
+    padding-left:85px;
+}
+.circle{
+    width: 32px;
+    height: 30px;
+    background: red;
+    border-radius: 50%;
+    color:white;
+    text-align: center;
+    font-size:13px;
+    font-weight: bold;
+}
+.tri{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid red;
+    margin-left: 11px;
 }
