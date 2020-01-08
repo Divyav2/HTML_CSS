@@ -1,129 +1,153 @@
-@media (min-width: 480px) and (max-width: 800px){
-    body{
-        margin:0px;
-    }
-.flex-head{
+$min-width: 480px;
+$max-width: 800px;
+@mixin flex-row{
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-     background-color: #333333;
-    color: white;
-   height: 70px;
+    flex-direction: row;  
 }
-.first_half, .sec_half{
-    padding-top: 2px;;
-    background-color:#333333;
-}
-.sec_half{
-    width:300px;
-}
-.border_bott{
-    padding-right: 20px;
-    padding-left: 60px;
-}
-.right_icons{
-    font-size: 24px;
-    padding-right: 20px;;
-}
-.left-icon{float: left;}
-
-.phone, .env{
-    font-size: 20px;
-    padding-right: 3px;
-}
-.flex-menu{
+@mixin flex-column{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    background-color: #f1f1f1;
+    flex-direction: column;  
 }
-.main_menu{
-    width: 230px;
-    float:left;
+@mixin shape{
+    width: 35px;
+    height: 37px;
 }
-.main_menu_right{
-    float:right;
-    width: 230px;;
-    font-size: 40px;
-}
-.fa-bars{float: right; 
-    padding-right: 20px; 
+@mixin ch2{
+    line-height: 1.6;
     color: gray;
-    padding-top: 10px;
-}
-.cmp_name{
-    font-family: sans-serif;
-    font-size: 23px;
-    margin-top: 15px;
-    color: orangered;
-    padding-right: 10px;
-    padding-left: 20px;
-}
-.flex-container > div{
-    display: none;
-}
-.main_img{
-    
-    filter: brightness(40%);
-    height:200px;
-}
-.text-block{
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: white;
-    top: 31%;
-    left: 0%; 
-    height: 100px;
- }
- .un_line{
-    border-bottom: 2px solid orangered;
-    padding-bottom:5px;
-}
-    
-.fset_1{
-    border-bottom: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    text-align:center; padding: 30px; 
-    margin-bottom: -24px;;
-}
-.fset_1 > p{
-   display: none;
-}
-.fset_2{
- display: none;
-}
-.save{
+    float:left;
     text-align: center;
-    font-size: 30;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 3px;
-    font-weight: bold;
 }
- /*-formstyle-*/
+$bc1: #333333;
+$bc2: #f1f1f1;
+$color1:  #f44336;
+$font: sans-serif;
+$border:2px solid orangered;
+
+@media (min-width:$min-width) and (max-width:$max-width){
+    body{
+        margin: 0px;
+        font-family: $font;
+    }
+    .flex-head{
+        @include flex-row;
+        justify-content: center;
+        background-color: $bc1;
+        color: white;
+        height: 70px;
+    }
+    .first_half , .sec_half{
+        padding-top: 2px;;
+        background-color: $bc1;
+    }
+    .sec_half{
+        width:300px;
+    }
+    .border_bott{
+        padding-right: 20px;
+        padding-left: 60px;
+    }
+    .right_icons{
+        font-size: 24px;
+        padding-right: 20px;;
+    }
+    .left-icon{float: left;}
+    
+    .phone, .env{
+        font-size: 20px;
+        padding-right: 3px;
+    }
+    .flex-menu{
+        @include flex-row;
+        background-color:$bc2;
+    }
+    .main_menu{
+        width: 230px;
+        float:left;
+    }
+    .main_menu_right{
+        float:right;
+        width: 230px;;
+        font-size: 40px;
+    }
+    .fa-bars{float: right; 
+        padding-right: 20px; 
+        color: gray;
+        padding-top: 10px;
+    }
+    .cmp_name{
+        font-size: 23px;
+        margin-top: 15px;
+        color: $color1;
+        padding-right: 10px;
+        padding-left: 20px;
+    }
+    .flex-container { 
+        div {
+        display: none;
+        }
+    }
+    .main_img{
+    
+        filter: brightness(40%);
+        height:200px;
+    }
+    .text-block{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        color: white;
+        top: 31%;
+        left: 0%; 
+        height: 100px;
+     }
+     .un_line{
+        border-bottom: 2px solid orangered;
+        padding-bottom:5px;
+    }
+    .fset_1{
+        border-bottom: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        text-align:center; padding: 30px; 
+        margin-bottom: -24px;;
+    p{
+        display: none;
+    }
+    }
+    .fset_2{
+        display: none;
+    }
+    .save{
+        text-align: center;
+        font-size: 30;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 3px;
+        font-weight: bold;
+    }
+     /*-formstyle-*/
  .form-align{
-  padding:20px;
-  padding-left: 30px;;  
-}
-.form{
+    padding:20px;
+    padding-left: 30px;;  
+  }
+  .form{
     width: 400px;
     height:350;
-  background: white;
-  box-shadow: 5px ;
-  box-shadow: 1px 2px 7px grey;
+    background: white;
+    box-shadow: 5px ;
+    box-shadow: 1px 2px 7px grey;
+  }
+  .container{
+      padding: 50;
+      width: 200px;
+      padding-left: 82px
   
-}
-.container{
-    padding: 50;
-    width: 200px;
-    padding-left: 82px
-
-}
-input[type=text], input[type=name] {
+  }
+  input[type=text] , input[type=name] {
     padding: 6px 25px;
     margin: 5px 0 18px 0;
     display: inline-block;
@@ -131,50 +155,42 @@ input[type=text], input[type=name] {
     background: #f1f1f1;
     padding-bottom: 10px;
     margin-bottom: 25px;
-} 
-.submitbtn{
-  padding: 12px 87px;
-  background-color: #f44336;
-  opacity: 0.9;
-  border: none;
-
 }
-
+.submitbtn{
+    padding: 12px 87px;
+    background-color: $color1;
+    opacity: 0.9;
+    border: none;
+  
+  } 
 label[for="name"], label[for="email"]{
-  font-family: sans-serif;
-  color: grey;
-  font-size: 15px;
-  font-weight: bold;
+    color: grey;
+    font-size: 15px;
+    font-weight: bold;
 }
 label[for="remember"]{
-  color: orangered;
-  font-family: sans-serif;
-  font-size: 15px;
-}
-.form-container{
-  position: relative;
-  padding-left: 260px;
- 
-}
-.leave-msg{
-    padding-left: 20px;
-}
+    color: $color1;
+    font-size: 15px;
+  }
 .read_more{
     color: grey; text-decoration: none;
 }
-.leave-msg >p{
-    color: grey;
-    line-height: 1.6;
+.leave-msg{
+    padding-left: 20px;
+    width:450px;
+      p{
+        color: grey;
+        line-height: 1.6;
+      }
 }
 /*container2*/
 .flex-container-two {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+   @include flex-column;
     align-items: flex-start;
     background-color: white;
     padding-top: 50px;
-    margin-bottom: 25px;;
+    margin-bottom: 25px;
+    padding-left: 40px;
 }
 .item{
     border: 1px solid lightgrey;
@@ -187,7 +203,7 @@ label[for="remember"]{
     margin-left: 15px;;
 }
 .item:hover {
-  border: 1px solid orangered;
+  border: $border;
 }
 .icon{
     float: left; 
@@ -198,37 +214,34 @@ label[for="remember"]{
     padding-left: 15px; 
     width: 200px
 }
-.content > p{
+ .content > p{
     color: grey;
-    line-height: 1.6;
-}
+    line-height: 1.6;}
+
 .fa-wrench , .fa-heartbeat, .fa-usd, .fa-credit-card-alt, .fa-user-plus{
     padding:10px; 
     border: 1px solid lightgrey; 
-    color: orangered; 
+    color: $color1; 
     margin-top: 15px; 
     margin-left: 7px; 
     font-size: 24px;
 } 
 .fa-wrench:hover, .fa-heartbeat:hover, .fa-usd:hover, .fa-credit-card-alt:hover, .fa-user-plus:hover{
-  cursor: pointer;
-  background-color: orangered;
-  color: white;
-}
-/*--aboutus--*/
-.flex-container-about-us{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    cursor: pointer;
+    background-color: $color1;
+    color: white;
+  }
+  .flex-container-about-us{
+   @include flex-row;
     justify-content: center;
     align-items: flex-start;
     background-color: whitesmoke;
 }
-.abt{
+.abt{ 
     text-align: center;
-}
-.abt > p{
+> p{
     line-height: 1.6;
+}
 }
 .line1{
     width: 65px;
@@ -239,13 +252,13 @@ label[for="remember"]{
 .line2{
     width: 60px;
     margin-left: 91px;
-    border-bottom: 2px solid orangered;
+    border-bottom: $border ;
     margin-top: 17px;
     float: left;
 }
 .line3{
     width: 60px;
-    border-bottom: 2px solid orangered;
+    border-bottom:$border;
     margin-top: 17;
     float: left;
 }
@@ -254,34 +267,26 @@ label[for="remember"]{
  }
 .tint{
     width: 30px;
-    color: orangered;
+    color: $color1;
     float: left;
     height: 25px;
     padding-top: 6px;
     padding-left: 5px;
     padding-right: 5px;
-    border-top: 2px solid orangered;
-    border-bottom: 2px solid orangered;
+    border-top: $border;
+    border-bottom: $border;
     }
 .charity{
-    text-align: center;
+   @include ch2;
     width: 340px;
     padding-bottom: 30px;
-    line-height: 1.6;
-    color: gray;
-    float: left;
     }
 .charity_1{
-    text-align: center;
-    width: 346px;
-    line-height: 1.6;
-    color: gray;
-    float: left;
-    }
+   @include ch2;
+    width: 346px;   
+}
 .flex-container-three{
-    display:flex;
-    flex-direction: row;
-    flex-wrap:wrap;
+    @include flex-row;
     background-color: whitesmoke;   
     }
 .about-us-1:nth-of-type(1){ order : 2 }
@@ -291,41 +296,37 @@ label[for="remember"]{
     padding-left: 25px;
     width:345px;
 }
-
-.row-1 p{
+row-1 p{
     line-height: 1.6;
     color: grey;
 }
 /*our-causes*/
 .flex-cause, .flex-gallery{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+   @include flex-row;
     justify-content: center;
     height: 180px;  
     padding-bottom: 20px;
 }
 .flex-container-causes{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
     justify-content: center;
-    padding-top: 30px;;
-    
+    padding-top: 30px; 
 }
 .content-1{
-    padding-left:15px;
+        width: 283px;
+     padding-left:15px;
      border:1px solid lightgrey;
      height:250px;
-}
-.content-1 > p{
+p{
     color:grey;
     line-height: 1.6;
 }
-.cause, .gallery, .volunteer{
-    text-align: center;
-    
+}
+.cause_1, .cause_2, .cause_3{
+    padding-bottom : 20px;}
 
+.cause, .gallery, .volunteer{
+    text-align: center; 
 }
 .count_0{
     height: 20px;
@@ -343,30 +344,22 @@ label[for="remember"]{
 .count_4{
     width:90px;float:right; color:orangered
 }
-.cause_1 ,.cause_2, .cause_3{
-    width:300px;
-    float:left;
-    padding-bottom: 20px;
-}
 .shapes_3{
-    width: 35px;
-    height: 37px;
+   @include shape;
     padding-left:214px;
 }
 .shapes_2{
-    width: 35px;
-    height: 37px;
+    @include shape;
     padding-left:165px;
 }
 .shapes_1{
-    width: 35px;
-    height: 37px;
+    @include shape;
     padding-left:85px;
 }
 .circle{
     width: 32px;
     height: 30px;
-    background: #f55437;
+    background: $color1;
     border-radius: 50%;
     color:white;
     text-align: center;
@@ -374,8 +367,7 @@ label[for="remember"]{
     font-weight: bold;
 }
 .tri{
-    width: 0;
-    height: 0;
+    width: 0; height: 0;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
     border-top: 8px solid #f55437;
@@ -428,29 +420,23 @@ label[for="remember"]{
     height: 200px; background-color: whitesmoke;
 }
 .flex-volunteer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
     justify-content: center;
     background-color: whitesmoke;
  
 }
 .flex-volunteer-container{
- display: flex;
-flex-direction: row;
-flex-wrap: wrap;
+@include flex-row;
 justify-content: center;
 background-color: whitesmoke;
 height: 420px;
 margin-top: 0px;;
-
 }
 .charity_2{
-    text-align: center;
+    @include ch2;
     width: 365px;
-    line-height: 1.6;
-    color: gray;
-    float:left;
+    
+    
 }
 .img{
     width:158px;
@@ -488,59 +474,55 @@ margin-top: 0px;;
     color:grey;
 }
 .grey-icons{
+
     padding-top: 30px;
     padding-left: 50px;
-    
-}
-.grey-icons > div{
+
+ div{
     padding-right: 25px;
     float: left;
+    }
 }
 .ff,.tt, .gg, .ll{
     font-size:20px;  color: grey;
 }
 /*footer*/
 .flex-container-footer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+   @include flex-row;
     background-color:  rgb(73, 72, 72);
     color: white;
     padding-left:20px;
     padding-bottom: 30px;
 }
 .flex-footer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
     background-color: orangered;
     color: white;
     justify-content: center;
     height:225px;
 }
 .flex-div{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-ul{
-    padding:0px;
-    
+   @include flex-row;
 }
 .foot_div{
     width:250px; 
     padding-left: 20px;
     width: 310px;
 }
-ul > li{
+ul{
+    ul{
+    padding:0px;
+    }
+    li{
     list-style-type: none;
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 0.5px solid grey;
-   
-}
-ul > li:hover{
-    color: orangered;
+        &:hover{
+            color: $color1;
+        }
+    }
+
 }
 .foot-btn{
     padding-top: 10px;
@@ -558,10 +540,10 @@ ul > li:hover{
     margin: 2px 2px;
     cursor: pointer;
     border: 2px solid white;
-}
-.buttn:hover{
-    background-color: orangered;
+    &:hover{
+        background-color: orangered;
     color: white;
+    }
 }
 input[type=mail]{
     padding-top: 10px;
@@ -571,7 +553,7 @@ input[type=mail]{
     margin-left: 10;
 }
 .bttn{
-    background-color: orangered;
+    background-color: $color1;
     color: white;
     padding: 4px 69px;
     text-align: center;
@@ -592,60 +574,55 @@ footer{
     background-color: rgb(73, 72, 72);
     color: white;
 }
-
 }
-/*========================================================================================*/
-/*========================================================================================*/
+/*------------------------------------------------*/
 @media (min-width: 800px){
 
-body{
-    margin:0px;
-}
-.flex-head{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-     background-color: #333333; 
-    color: white;
-    height: 40px;
-   
-}
-.first_half{
-    padding-left: 260px;
-   width: 525px;
-   float: left;
-    padding-top:1px;
-}
-.left-icon{
-   border-bottom: 1px solid orangered;
-   float:left;
-}
-.sec_half{
-    Width:575px;
-    background-color:#333333;
-    float:left;
-}
-.border_bot{
-    padding-top: 12px;
-}
-.border_bott{
-    float: right;
-    padding-top: 8px;
-    border-bottom: 1px solid orangered;
-}
-.phone, .env{
-    font-size: 24px;
-    padding-right: 3px;
-}
-.right_icons{
-    font-size: 26;
-    padding-right: 20px;
-}
-/*--Comp*/
+    body{
+        margin:0px;
+        font-family: $font;
+    }
+    .flex-head{
+       @include flex-row;
+         background-color: #333333; 
+        color: white;
+        height: 40px;
+       
+    }
+    .first_half{
+        padding-left: 260px;
+       width: 525px;
+       float: left;
+        padding-top:1px;
+    }
+    .left-icon{
+       border-bottom: $border;
+       float:left;
+    }
+    .sec_half{
+        width:600px;
+        background-color:#333333;
+        float:left;
+    }
+    .border_bot{
+        padding-top: 12px;
+    }
+    .border_bott{
+        float: right;
+        padding-top: 8px;
+        border-bottom: $border;
+    }
+    .phone, .env{
+        font-size: 24px;
+        padding-right: 3px;
+    }
+    .right_icons{
+        font-size: 26;
+        padding-right: 20px;
+    }
+    /*--Comp*/
 .flex-menu{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
 }
 .main_menu{
     padding-left: 260px;
@@ -660,13 +637,11 @@ body{
     font-family: sans-serif;
     font-size: 25px;
     margin-top: 15px;
-    color: orangered;
+    color: $color1;
     padding-right: 20px;
 }
 .flex-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
     height: 0px;
 }
 .flex-container > div{
@@ -686,37 +661,30 @@ body{
     cursor: pointer;
     text-decoration: none;
   }
-  
   .dropdown {
     position: relative;
     display: inline-block;
   }
-  
   .dropdown-content {
     display: none;
     position: absolute;
     min-width: 160px;
     z-index: 1;
     background-color: white;
-
-  }
-  
-  .dropdown-content a {
+ a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
-
-  }
-  
-  .dropdown-content a:hover 
+         &:hover 
   {color:orangered}
+ }
+}
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
-  .dropdown:hover .drop {
+.dropdown:hover .drop {
     color: orangered;
     width: 20px;
     height:20px; 
@@ -726,8 +694,7 @@ body{
   }
   .donate > .button{
     background-color: white ;
-    border: none;
-    color: orangered;
+    color: $color1;
     padding: 10px 30px;
     text-align: center;
     text-decoration: none;
@@ -737,7 +704,7 @@ body{
     cursor: pointer;
     border: 2px solid orangered;
   }
-/* Centre image*/
+  /* Centre image*/
 
 .main_img{
     opacity: 0.8;
@@ -754,7 +721,7 @@ transform: translate(-55%, -30%);
 
 }
 .un_line{
-    border-bottom: 2px solid orangered;
+    border-bottom: $border;
     padding-bottom:5px;
 }
 .fset_1{
@@ -783,7 +750,6 @@ transform: translate(-55%, -30%);
 }
 .button{
     background-color: transparent ;
-    border: none;
     color:white;
     padding: 10px 30px;
     text-align: center;
@@ -793,10 +759,9 @@ transform: translate(-55%, -30%);
     margin: 4px 25px;
     cursor: pointer;
     border: 2px solid white;
-    
   }
-   /*-formstyle-*/
-   .form-align{
+  /*-formstyle-*/
+  .form-align{
     top: -108px;
     left: 295px;
     position: relative;
@@ -827,21 +792,19 @@ margin-bottom: 25px;
 } 
 .submitbtn{
   padding: 12px 87px;
-  background-color: #f44336;
+  background-color: $color1;
   opacity: 0.9;
   border: none;
 
 }
 
 label[for="name"], label[for="email"]{
-  font-family: sans-serif;
   color: grey;
   font-size: 15px;
   font-weight: bold;
 }
 label[for="remember"]{
-  color: orangered;
-  font-family: sans-serif;
+  color:$color1;
   font-size: 15px;
 }
 .form-container{
@@ -854,34 +817,30 @@ label[for="remember"]{
     float: left;
     padding-left: 300px;
     margin-top:-280px;
-}
-.leave-msg >h3 {
+h3 {
    padding-left: 350px;
-    font-family: sans-serif;
     font-size: 20px;
     margin-bottom: 0px;
 
 }
-.leave-msg > hr{
+hr{
     width: 0;
     float: left;
     margin-left: 50px;
     margin-top: 5px;
-
 }
-.leave-msg >p{
+p{
     color: grey;
     padding-left: 350px;
     line-height: 1.6;
+}
 }
 .read_more{
     color: grey; padding-left: 350; text-decoration: none;
 }
 /*--Flexbox-container-two--*/
 .flex-container-two {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+   @include flex-column;
     justify-content: flex-start;
     align-items: flex-start;
     background-color: white;
@@ -900,9 +859,9 @@ label[for="remember"]{
     display: flex;/*to center align numbers */
     padding-left: 20px;
     margin-left: 15px;;
-}
-.item:hover {
+    &:hover {
   border: 1px solid orangered;
+}
 }
 .icon{
   float: left; 
@@ -920,7 +879,7 @@ label[for="remember"]{
 .fa-wrench , .fa-heartbeat, .fa-usd, .fa-credit-card-alt, .fa-user-plus{
   padding:10px; 
   border: 1px solid lightgrey; 
-  color: orangered; 
+  color: $color1;
   margin-top: 15px; 
   margin-left: 7px; 
   font-size: 24px;
@@ -928,21 +887,18 @@ label[for="remember"]{
 } 
 .fa-wrench:hover, .fa-heartbeat:hover, .fa-usd:hover, .fa-credit-card-alt:hover, .fa-user-plus:hover{
   cursor: pointer;
-  background-color: orangered;
+  background-color: $color1;
   color: white;
 }
 /*--aboutus--*/
 .flex-container-about-us{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
     justify-content: center;
     align-items: flex-start;
     background-color: whitesmoke;
 }
 .flex-container-about-us:first-child{
     display: flex;
-
 }
 .about-us-1{
     margin-left: 300px;
@@ -952,9 +908,9 @@ label[for="remember"]{
 }
 .abt{
     text-align: center;
-}
-.abt > p{
+ p{
     line-height: 1.6;
+    }
 }
 .line1{
     width: 65px;
@@ -965,13 +921,13 @@ label[for="remember"]{
 .line2{
     width: 60px;
     margin-left: 171px;
-    border-bottom: 2px solid orangered;
+    border-bottom: $border;
     margin-top: 17px;
     float: left;
 }
 .line3{
     width: 60px;
-    border-bottom: 2px solid orangered;
+    border-bottom: $border;
     margin-top: 17;
     float: left;
 }
@@ -980,7 +936,7 @@ label[for="remember"]{
  }
 .tint{
     width: 30px;
-    color: orangered;
+    color: $color1;
     float: left;
     height: 25px;
     padding-top: 6px;
@@ -989,26 +945,17 @@ label[for="remember"]{
     border-top: 2px solid orangered;
     border-bottom: 2px solid orangered;
     }
-    .charity{
-    text-align: center;
+.charity{
+  @include ch2;
     width: 499px;
     padding-bottom: 30px;
-    line-height: 1.6;
-    color: gray;
-    float: left;
     }
-    .charity_1{
-    text-align: center;
+.charity_1{
+    @include ch2;
     width: 499px;
-    line-height: 1.6;
-    color: gray;
-    float: left;
     }
-
-    .flex-container-three{
-    display:flex;
-    flex-direction: row;
-    flex-wrap:wrap;
+.flex-container-three{
+   @include flex-row;
     padding-left:90px;
     background-color: whitesmoke;
     padding-bottom: 90px;   
@@ -1016,45 +963,37 @@ label[for="remember"]{
 .row-1{
     width: 358px; 
     padding-left: 2px;
-    }
-.row-1 p{
+ p{
     line-height: 1.6;
     color: grey;
-}
+}}
 /*our-causes*/
 .flex-cause, .flex-gallery{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  @include flex-row;
     justify-content: center;
     height: 165px;  
 }
 .flex-container-causes{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  @include flex-column;
     justify-content: center;
     align-items: flex-start;
     height: 590px;
     margin-bottom: 25px;
    padding-right:200px;
    padding-left: 400px;;
-    width:55%;
-    
+    width:55%;  
 }
 .content-1{
     padding-left:15px;
      border:1px solid lightgrey;
      height:250px;
-}
-.content-1 > p{
+ p{
     color:grey;
     line-height: 1.6;
 }
+}
 .cause, .gallery, .volunteer{
     text-align: center;
-    
-
 }
 .count_0{
     height: 20px;
@@ -1078,24 +1017,21 @@ label[for="remember"]{
     padding-right: 50px;
 }
 .shapes_3{
-    width: 35px;
-    height: 37px;
+    @include shape;
     padding-left:214px;
 }
 .shapes_2{
-    width: 35px;
-    height: 37px;
+    @include shape;
     padding-left:165px;
 }
 .shapes_1{
-    width: 35px;
-    height: 37px;
+    @include shape;
     padding-left:85px;
 }
 .circle{
     width: 32px;
     height: 30px;
-    background: #f55437;
+    background: $color1;
     border-radius: 50%;
     color:white;
     text-align: center;
@@ -1139,7 +1075,6 @@ label[for="remember"]{
     margin-top: 85px;
     float: left;
     line-height: 1.2;
-
 }
 .ok{
     float:left;
@@ -1150,34 +1085,28 @@ label[for="remember"]{
     flex-direction: row;
     align-items: flex-start;
     height: 400px;
-
+    padding-top: 25px;
+   
 }
 /*Volunteer*/
 .common{
     height: 200px; background-color: whitesmoke;
 }
 .flex-volunteer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  @include flex-row;
     justify-content: center;
     background-color: whitesmoke;
 }
 .flex-volunteer-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
     justify-content: center;
     background-color: whitesmoke;
     height: 500px;
     margin-top: 0px;
 }
 .charity_2{
-    text-align: center;
+    @include ch2;
     width: 499px;
-    line-height: 1.6;
-    color: gray;
-    float:left;
 }
 .img{
     width:158px;
@@ -1213,55 +1142,45 @@ label[for="remember"]{
 .grey-icons{
     padding-top: 30px;
     padding-left: 50px;
-    
-}
-.grey-icons > div{
+    div{
     padding-right: 25px;
     float: left;
+    }
 }
 .ff,.tt, .gg, .ll{
     font-size:20px;  color: grey;
 }
 /*footer*/
 .flex-container-footer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex-row;
     background-color:  rgb(73, 72, 72);
     color: white;
     justify-content: center;
 }
 .flex-footer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: orangered;
+   @include flex-row;
+    background-color: $color1;
     color: white;
     justify-content: center;
-}
-ul{
-    padding:0px;
-    
 }
 .foot_div{
     width:250px; height:400px;
     padding-left: 20px;
 }
-ul > li{
+ul{
+    padding:0px;
+    li{
     list-style-type: none;
     padding-top: 20px;
     padding-bottom: 20px;
     border-bottom: 0.5px solid grey;
-   
-}
-.flex-div{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-ul > li:hover{
+        &:hover{
     color: orangered;
 }
+    }}
+.flex-div{
+    @include flex-row;
+ }
 .foot-btn{
     padding-top: 10px;
     padding-bottom: 5px;
@@ -1278,10 +1197,10 @@ ul > li:hover{
     margin: 2px 2px;
     cursor: pointer;
     border: 2px solid white;
-}
-.buttn:hover{
+    &:hover{
     background-color: orangered;
     color: white;
+    }
 }
 input[type=mail]{
     padding-top: 10px;
@@ -1291,7 +1210,7 @@ input[type=mail]{
     margin-left: 10;
 }
 .bttn{
-    background-color: orangered;
+    background-color:$color1;
     color: white;
     padding: 4px 69px;
     text-align: center;
