@@ -104,7 +104,7 @@ $border:2px solid orangered;
         height: 100px;
      }
      .un_line{
-        border-bottom: 2px solid orangered;
+        border-bottom: $border;
         padding-bottom:5px;
     }
     .fset_1{
@@ -190,7 +190,7 @@ label[for="remember"]{
     background-color: white;
     padding-top: 50px;
     margin-bottom: 25px;
-    padding-left: 40px;
+    padding-bottom: 20px;
 }
 .item{
     border: 1px solid lightgrey;
@@ -339,10 +339,10 @@ p{
     width:50px;float:right;
 }
 .count_3{
-    width:100px; float:left; color:orangered
+    width:100px; float:left; color:$color1;
 }
 .count_4{
-    width:90px;float:right; color:orangered
+    width:90px;float:right; color:$color1;
 }
 .shapes_3{
    @include shape;
@@ -434,9 +434,7 @@ margin-top: 0px;;
 }
 .charity_2{
     @include ch2;
-    width: 365px;
-    
-    
+    width: 365px;    
 }
 .img{
     width:158px;
@@ -474,7 +472,6 @@ margin-top: 0px;;
     color:grey;
 }
 .grey-icons{
-
     padding-top: 30px;
     padding-left: 50px;
 
@@ -496,7 +493,7 @@ margin-top: 0px;;
 }
 .flex-footer{
     @include flex-row;
-    background-color: orangered;
+    background-color: $color1;
     color: white;
     justify-content: center;
     height:225px;
@@ -541,7 +538,7 @@ ul{
     cursor: pointer;
     border: 2px solid white;
     &:hover{
-        background-color: orangered;
+        background-color: $color1;
     color: white;
     }
 }
@@ -584,7 +581,7 @@ footer{
     }
     .flex-head{
        @include flex-row;
-         background-color: #333333; 
+         background-color: $bc1; 
         color: white;
         height: 40px;
        
@@ -601,7 +598,7 @@ footer{
     }
     .sec_half{
         width:600px;
-        background-color:#333333;
+        background-color:$bc1;
         float:left;
     }
     .border_bot{
@@ -634,7 +631,6 @@ footer{
     display: none;
 }
 .cmp_name{
-    font-family: sans-serif;
     font-size: 25px;
     margin-top: 15px;
     color: $color1;
@@ -678,14 +674,14 @@ footer{
     display: block;
     text-align: left;
          &:hover 
-  {color:orangered}
+  {color:$color1;}
  }
 }
   .dropdown:hover .dropdown-content {
     display: block;
   }
 .dropdown:hover .drop {
-    color: orangered;
+    color: $color1;
     width: 20px;
     height:20px; 
   }
@@ -702,7 +698,7 @@ footer{
     font-size: 14px;
     margin: 4px 2px;
     cursor: pointer;
-    border: 2px solid orangered;
+    border: $border;
   }
   /* Centre image*/
 
@@ -786,7 +782,7 @@ padding: 6px 25px;
 margin: 5px 0 18px 0;
 display: inline-block;
 border: none;
-background: #f1f1f1;
+background: $bc2;
 padding-bottom: 10px;
 margin-bottom: 25px;
 } 
@@ -860,7 +856,7 @@ p{
     padding-left: 20px;
     margin-left: 15px;;
     &:hover {
-  border: 1px solid orangered;
+  border: $border;
 }
 }
 .icon{
@@ -942,8 +938,8 @@ p{
     padding-top: 6px;
     padding-left: 5px;
     padding-right: 5px;
-    border-top: 2px solid orangered;
-    border-bottom: 2px solid orangered;
+    border-top: $border;
+    border-bottom: $border;
     }
 .charity{
   @include ch2;
@@ -1006,10 +1002,10 @@ p{
     width:50px;float:right;
 }
 .count_3{
-    width:100px; float:left; color:orangered
+    width:100px; float:left; color: $color1;
 }
 .count_4{
-    width:90px;float:right; color:orangered
+    width:90px;float:right; color: $color1;
 }
 .cause_1 ,.cause_2, .cause_3{
     width:300px;
@@ -1175,7 +1171,7 @@ ul{
     padding-bottom: 20px;
     border-bottom: 0.5px solid grey;
         &:hover{
-    color: orangered;
+    color: $color1;
 }
     }}
 .flex-div{
@@ -1198,7 +1194,7 @@ ul{
     cursor: pointer;
     border: 2px solid white;
     &:hover{
-    background-color: orangered;
+    background-color: $color1;
     color: white;
     }
 }

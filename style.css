@@ -196,7 +196,7 @@
     background-color: white;
     padding-top: 50px;
     margin-bottom: 25px;
-    padding-left: 40px;
+    padding-bottom: 20px;
   }
 
   .item {
@@ -400,13 +400,13 @@
   .count_3 {
     width: 100px;
     float: left;
-    color: orangered;
+    color: #f44336;
   }
 
   .count_4 {
     width: 90px;
     float: right;
-    color: orangered;
+    color: #f44336;
   }
 
   .shapes_3 {
@@ -600,7 +600,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background-color: orangered;
+    background-color: #f44336;
     color: white;
     justify-content: center;
     height: 225px;
@@ -650,7 +650,7 @@
     border: 2px solid white;
   }
   .buttn:hover {
-    background-color: orangered;
+    background-color: #f44336;
     color: white;
   }
 
@@ -759,7 +759,6 @@
   }
 
   .cmp_name {
-    font-family: sans-serif;
     font-size: 25px;
     margin-top: 15px;
     color: #f44336;
@@ -810,7 +809,7 @@
     text-align: left;
   }
   .dropdown-content a:hover {
-    color: orangered;
+    color: #f44336;
   }
 
   .dropdown:hover .dropdown-content {
@@ -818,7 +817,7 @@
   }
 
   .dropdown:hover .drop {
-    color: orangered;
+    color: #f44336;
     width: 20px;
     height: 20px;
   }
@@ -1014,7 +1013,7 @@
     margin-left: 15px;
   }
   .item:hover {
-    border: 1px solid orangered;
+    border: 2px solid orangered;
   }
 
   .icon {
@@ -1203,13 +1202,13 @@
   .count_3 {
     width: 100px;
     float: left;
-    color: orangered;
+    color: #f44336;
   }
 
   .count_4 {
     width: 90px;
     float: right;
-    color: orangered;
+    color: #f44336;
   }
 
   .cause_1, .cause_2, .cause_3 {
@@ -1422,7 +1421,7 @@
     border-bottom: 0.5px solid grey;
   }
   ul li:hover {
-    color: orangered;
+    color: #f44336;
   }
 
   .flex-div {
@@ -1449,7 +1448,7 @@
     border: 2px solid white;
   }
   .buttn:hover {
-    background-color: orangered;
+    background-color: #f44336;
     color: white;
   }
 
