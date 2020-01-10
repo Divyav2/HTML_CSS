@@ -36,6 +36,7 @@
     .flex-menu {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         background-color: #f1f1f1;
         }
     .main_menu {
@@ -72,8 +73,8 @@
         bottom: 20px;
         right: 20px;
         color: white;
-        top: 31%;
-        left: 0%; 
+        top: 180px;
+        left: 30px;
         height: 100px;
         }
     .un_line {
@@ -102,20 +103,23 @@
         font-weight: bold;
         }
     /*-formstyle-*/
+    .flex-container-form-msg{
+        display:flex;
+        flex-wrap: wrap;
+    }
     .form-align{
     padding:20px;
-    padding-left: 30px;;  
+    padding-left: 30px;
         }
     .form {
-        width: 400px;
-        height:350;
+        width: 300px;
         background: white;
+        float: right;
         box-shadow: 1px 2px 7px grey;
         }
     .container {
-        padding: 50;
+        padding: 35px;
         width: 200px;
-        padding-left: 82px;
         }
     input[type=text], input[type=name] {
         padding: 6px 25px;
@@ -146,29 +150,26 @@
     .form-container {
     position: relative;
     padding-left: 260px;
-    
-        }
-    .leave-msg {
-        padding-left: 20px;
-        }
+    }
+    .leave-msg{
+        padding-left:10%;
+        padding-right: 10%;
+    }
     .read_more {
         color: grey; 
         text-decoration: none;
         }
-    .leave-msg >p {
+    .para-msg {
         color: grey;
         line-height: 1.6;
         }
     /*container2*/
     .flex-container-two {
-        display: flex;
-        flex-direction: column;
+        display:flex;
         flex-wrap: wrap;
-        align-items: flex-start;
-        background-color: white;
-        padding-top: 50px;
-        margin-bottom: 25px;;
-        }
+        justify-content: center; 
+        padding-bottom: 20px;
+    }
     .item {
         border: 1px solid lightgrey;
         background-color: white;
@@ -176,9 +177,7 @@
         width: 350px;
         margin: 10px;
         display: flex;
-        padding-left: 20px;
-        margin-left: 15px;;
-        }
+    }
     .item:hover {
         border: 1px solid orangered;
         }
@@ -281,6 +280,9 @@
     .about-us-1, .about-us-3{
         padding-left: 25px;
         width:345px;
+        }
+        .about-us-2 > img{
+            padding-left:30px;
         }
 
     .row-1 p{
@@ -404,18 +406,11 @@
         float: left;
         line-height: 1.2;
         }
-    .ok .imgs {
-        width:480px;
-        height: 350px;
+        .ok >img {
+            width:100%;
         }
-    .ok .imgo {
-        width:100%;
-        height:600px;
-        }
-    .flex-img {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        .ok > div > img{
+            width:100%;
         }
     /*Volunteer*/
     .common {
@@ -430,12 +425,12 @@
     
         }
     .flex-volunteer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: whitesmoke;
-    height: 420px;
-    margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: whitesmoke;
+        height: 420px;
+        margin-top: 0px;
         }
     .charity_2 {
         text-align: center;
@@ -587,8 +582,7 @@
 }
 /*========================================================================================*/
 /*========================================================================================*/
-@media (min-width: 800px)
-{
+@media (min-width: 800px){
 
     body {
         margin:0px;
@@ -596,33 +590,34 @@
     .flex-head {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         background-color: #333333; 
         color: white;
         height: 40px;
     
     }
     .first_half {
-        padding-left: 260px;
-    width: 525px;
-    float: left;
-        padding-top:1px;
+        float: left;
+        padding-top: 1px;
+        flex-basis: 35%;
     }
     .left-icon {
-    border-bottom: 1px solid orangered;
-    float:left;
+        border-bottom: 2px solid orangered;
+        float:left;
+     
     }
     .sec_half {
-        Width:575px;
         background-color:#333333;
         float:left;
+        flex-basis: 26%;
     }
     .border_bot { 
         padding-top: 12px;
     }
     .border_bott {
         float: right;
-        padding-top: 8px;
-        border-bottom: 1px solid orangered;
+        padding-top: 9px;
+        border-bottom: 2px solid orangered;
     }
     .phone, .env {
         font-size: 24px;
@@ -635,11 +630,11 @@
     /*--Comp*/
     .flex-menu {
         display: flex;
-        flex-wrap: wrap;
+       
+        justify-content: center;
     }
     .main_menu {
-        padding-left: 260px;
-        width: 300px;
+       
         float: left;
         height: 75;
     }
@@ -648,14 +643,13 @@
     }
     .cmp_name {
         font-family: sans-serif;
-        font-size: 25px;
+        font-size: 20px;
         margin-top: 15px;
         color: orangered;
         padding-right: 20px;
     }
     .flex-container {
         display: flex;
-        flex-wrap: wrap;
         height: 0px;
     }
     .flex-container > div {
@@ -699,8 +693,8 @@
 
     }
     
-    .dropdown-content a:hover 
-    {color:orangered
+    .dropdown-content a:hover {
+        color:orangered
     }
     .dropdown:hover .dropdown-content {
         display: block;
@@ -727,30 +721,29 @@
         border: 2px solid orangered;
     }
     /* Centre image*/
-
+    .img-container{
+    display: flex;
+    justify-content: center;
+}
     .main_img{
         opacity: 0.8;
         filter: brightness(25%);
         }
     .text-block {
         position: absolute;
-        bottom: 20px;
-        right: 20px;
         color: white;
-        left: 945px;
-        top: 410px;
-        transform: translate(-55%, -30%);
-
+        top: 370;
+        width: 50%;
         }
     .un_line {
         border-bottom: 2px solid orangered;
         padding-bottom:5px;
         }
     .save-life-border{
-        border-bottom: none;;
+        border-bottom: none;
         text-align:center; 
         padding: 30px; 
-        margin-bottom: -24px;;
+        margin-bottom: -24px;
         }
     .save-life-border > p {
         text-align: center;
@@ -785,24 +778,26 @@
         
     }
     /*-formstyle-*/
+    .flex-container-form-msg{
+        display: flex;
+        padding-bottom: 115px
+
+    }
     .form-align {
-        top: -108px;
-        left: 295px;
-        position: relative;
-        transform: translate(10px,10px);
-        width: 335px; 
+         width: 35%;
+        position: absolute;
+        margin-top: -114px;
+
     }
     .form {
-        width:315px; 
+        width: 300px;
         background: white;
+        float: right;
         box-shadow: 1px 2px 7px grey;
-    
     }
     .container {
-        padding: 30px;
+        padding: 35px;
         width: 200px;
-        padding-left: 45px;
-
     }
     input[type=text], input[type=name] {
         padding: 6px 25px;
@@ -835,51 +830,40 @@
     .form-container {
         position: relative;
         padding-left: 260px;
-    
     }
-    .leave-msg {
-        width: 64%;
-        float: left;
-        padding-left: 300px;
-        margin-top:-280px;
+    .message{
+        display: flex;
+        flex-wrap: wrap;
+        width:74%;
+    }
+    .leave-msg{
+        padding-left: 37%;
+    }
+    .para-msg{
+        color: gray;
+        line-height: 1.6;
     }
     .leave-msg >h3 {
-    padding-left: 350px;
         font-family: sans-serif;
         font-size: 20px;
         margin-bottom: 0px;
 
     }
-    .leave-msg > hr {
-        width: 0;
-        float: left;
-        margin-left: 50px;
-        margin-top: 5px;
-
-    }
-    .leave-msg >p {
-        color: grey;
-        padding-left: 350px;
-        line-height: 1.6;
-    }
     .read_more{
         color: grey; 
-        padding-left: 350; 
         text-decoration: none;
     }
     /*--Flexbox-container-two--*/
-    .flex-container-two {
+    .dummy-container{
         display: flex;
-        flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+    .flex-container-two {
+        display:flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        background-color: white;
-        height: 400px;
-        width: 1200px;
-        padding-left: 307px;
-        padding-right: 200px;
-        margin-bottom: 25px;;
+        justify-content: center;
+        width:1120px;
     }
     .item {
         border: 1px solid lightgrey;
@@ -888,8 +872,7 @@
         width: 350px;
         margin: 10px;
         display: flex;
-        padding-left: 20px;
-        margin-left: 15px;;
+
     }
     .item:hover {
         border: 1px solid orangered;
@@ -933,11 +916,9 @@
         display: flex;
 
     }
-    .about-us-1{
-        margin-left: 300px;
-    }
-    .about-us-3{
-        padding-left: 30px;
+    .about-us{
+        display: flex;
+        justify-content: center;
     }
     .abt{
         text-align: center;
@@ -978,15 +959,10 @@
         border-top: 2px solid orangered;
         border-bottom: 2px solid orangered;
     }
-        .charity {
-        text-align: center;
-        width: 499px;
+    .charity {
         padding-bottom: 30px;
-        line-height: 1.6;
-        color: gray;
-        float: left;
     }
-        .charity_1 {
+    .charity_1, .charity {
         text-align: center;
         width: 499px;
         line-height: 1.6;
@@ -994,15 +970,17 @@
         float: left;
     }
 
-        .flex-container-three {
+    .flex-container-three {
         display:flex;
-        flex-wrap:wrap;
-        padding-left:90px;
+        justify-content: center;
         background-color: whitesmoke;
         padding-bottom: 90px;   
         }
+    .about-us-1, .about-us-2, .about-us-3{
+        width:370px;
+    }
     .row-1 {
-        width: 358px; 
+        
         padding-left: 2px;
         }
     .row-1 p {
@@ -1018,16 +996,10 @@
     }
     .flex-container-causes {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: flex-start;
-        height: 590px;
         margin-bottom: 25px;
-        padding-right:200px;
-        padding-left: 400px;;
-        width:55%;
-        
     }
     .content-1 {
         padding-left:15px;
@@ -1094,22 +1066,23 @@
         font-weight: bold;
     }
     .tri {
-        width: 0;
-        height: 0;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         border-top: 8px solid #f55437;
         margin-left: 11px;
     }
+    /*movie-section*/
     .movie {
-        height: 400px; 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         background-color: black;
+        padding-bottom: 40px;
     }
     .img-overlay {
         width:400px;
         height: 250px;
-        margin-left: 400px;
-        margin-top: 85px;
+        margin-top: 20px;
         border: 1px solid black;
         float: left;
         
@@ -1128,21 +1101,17 @@
         color:white;
         padding-left: 20px;;
         width: 500px;
-        margin-top: 85px;
+        margin-top: 20px;
         float: left;
         line-height: 1.2;
 
     }
-    .ok { 
-        float:left;
-        margin-top: 0px;;
+    .ok > img{
+        height: 400px; 
+        width:100%;
     }
     .flex-img{
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        height: 400px;
-
+     display: flex; 
     }
     /*Volunteer*/
     .common{
@@ -1158,10 +1127,9 @@
     }
     .flex-volunteer-container {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         background-color: whitesmoke;
-        height: 500px;
+        height: 450px;
         margin-top: 0px;
     }
     .charity_2 {
@@ -1172,20 +1140,19 @@
         float:left;
     }
     .img {
-        width:158px;
-        height:150px;
-        margin-left: 48px;
+        
+        height: 150px;
+        margin-left: 19px;
         padding-top: 50px;
     }
     .volun-1, .volun-2, .volun-3, .volun-4 {
         height:375px;
-        width:250px;
-        padding-right: 30px;
+        padding-right: 20px;
     }
     .volun-name {
-        height:250px;
-        width:250px;
-        margin-top:-79px;
+        height: 250px;
+        width: 190px;
+        margin-top: -79px;
         background-color: white;
         float: left;
     }
@@ -1204,7 +1171,7 @@
         }
     .grey-icons {
         padding-top: 30px;
-        padding-left: 50px;
+        padding-left: 25px;
         
         }
     .grey-icons > div {
@@ -1302,4 +1269,4 @@
         background-color: rgb(73, 72, 72);
         color: white;
         }
-}
+    }
