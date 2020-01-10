@@ -1066,6 +1066,8 @@
         font-weight: bold;
     }
     .tri {
+        width: 0px;
+        height: 0px;
         border-left: 5px solid transparent;
         border-right: 5px solid transparent;
         border-top: 8px solid #f55437;
