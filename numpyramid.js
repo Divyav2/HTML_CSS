@@ -2,23 +2,21 @@ var row = require("readline");
 var prompts = row.createInterface(process.stdin, process.stdout);
 prompts.question("How many row you want to print ?", function(n) {
   for (var i = 0; i <= n; i++) {
-    var sp = " ";
+    var sp = "";
     for (var space = 0; space <= n - i; space++) {
-      sp = sp + " " + " ";
+      sp = sp + " " ;
     }
     j = i;
 
-    for (var c = 1; c <= i; c++) {
-      sp = sp + (j + " ");
+    for (var c = 1;  c<= i; c++) {
+      sp = sp + (j % 10);
       j++;
-    }
-
-    j = j - 2;
-    for (var c = 1; c < i; c++) {
-      sp = sp + (j + " ");
-
+  }
+  j=j-2;
+  for (var c = 1; c < i; c++) {
+      sp = sp + (j % 10);
       j--;
-    }
+  }
 
     console.log(sp);
   }
