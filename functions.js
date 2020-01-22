@@ -46,6 +46,14 @@ function twice(binary1)
     return binary1(x,x);
   };
 }
+/*Write  methodize, a function that converts a binary function to a method.*/
+function methodize(funct){
+  return function(num){
+    return funct(this,num);
+  }
+}
+Number.prototype.add = methodize(add);
+
 
 /*write a function composeu that takes two unary functions  and returns a unary function that can ball them both*/
 function double(x){
@@ -95,6 +103,12 @@ console.log(d(11));
 var d=twice(mul);
 console.log(d(11));
 console.log("----------");
+
+/*Write  methodize, a function that converts a binary function to a method */
+console.log("----------");
+console.log((2).add(10));
+console.log("----------");
+
 /*write a function composeu that takes two unary functions  and returns a unary function that can ball them both*/
 console.log("----------");
 console.log(compose(double, square) (3));
